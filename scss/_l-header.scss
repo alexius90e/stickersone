@@ -1,0 +1,257 @@
+.header {
+  position: relative;
+  max-width: 1440px;
+  margin: 0 auto;
+  background-color: #f7f7f6;
+
+  &__topline {
+    padding: 5px 15px;
+    color: $black;
+    font-size: 12px;
+    font-style: normal;
+    font-weight: 600;
+    line-height: normal;
+    text-align: center;
+    background-color: $yellow;
+
+    & span {
+      @include tablet {
+        display: none;
+      }
+    }
+  }
+
+  &__container {
+    display: flex;
+    align-items: center;
+    gap: 80px;
+    max-width: 1280px;
+    margin: 0 auto;
+    padding: 23px 15px;
+
+    @include desktop {
+      gap: 60px;
+    }
+
+    @include laptop {
+      gap: 40px;
+    }
+
+    @include tablet {
+      justify-content: space-between;
+      padding: 10px 15px;
+    }
+  }
+
+  &__logo {
+    flex: 0 0 auto;
+
+    @include tablet {
+      order: 1;
+    }
+
+    &-link {
+      display: inline-block;
+      width: 55px;
+      height: 55px;
+
+      @include tablet {
+        width: 40px;
+        height: 40px;
+      }
+    }
+
+    &-image {
+      width: 100%;
+      height: auto;
+    }
+  }
+
+  &__nav {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    margin-left: 110px;
+
+    @include desktop {
+      margin-left: 0;
+    }
+
+    @include tablet {
+      position: absolute;
+      top: 0;
+      left: -1000px;
+      z-index: 1000;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      justify-content: flex-start;
+      gap: 12px;
+      max-width: 480px;
+      height: 100vh;
+      width: 100%;
+      padding: 110px 10px 30px;
+      box-sizing: border-box;
+      background-color: #f7f7f6;
+      transition: left ease-in-out 0.4s;
+      will-change: left;
+    }
+
+    &.active {
+      @include tablet {
+        left: 0;
+      }
+    }
+
+    &-link {
+      color: $black;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+      text-transform: uppercase;
+      transition: $baseTransition;
+
+      @include laptop {
+        font-size: 14px;
+      }
+
+      @include tablet {
+        font-size: 22px;
+        font-weight: 400;
+      }
+
+      &:hover {
+        color: $yellow;
+      }
+
+      &_for-business {
+        margin-left: 67px;
+        padding: 2px 5px;
+        color: #da9f00;
+        font-weight: 600;
+        text-transform: uppercase;
+        border: 2px solid #ecb144;
+
+        @include laptop {
+          margin-left: 0;
+        }
+
+        @include tablet {
+          margin-top: 36px;
+        }
+      }
+    }
+
+    &-social {
+      display: none;
+
+      @include tablet {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        margin-top: 40px;
+      }
+
+      &-link {
+        display: inline-block;
+        height: 40px;
+        width: 40px;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: 40px;
+
+        &_tg {
+          background-image: url(../assets/tg.svg);
+        }
+
+        &_vk {
+          background-image: url(../assets/vk.svg);
+        }
+      }
+    }
+
+    &-close-button {
+      position: absolute;
+      top: 30px;
+      left: 10px;
+      display: none;
+      height: 30px;
+      width: 30px;
+      border: none;
+      background: url(../assets/close.svg) center no-repeat;
+      background-size: 30px;
+
+      @include tablet {
+        display: inline-block;
+      }
+    }
+  }
+
+  &__cart {
+    flex: 0 0 auto;
+    height: 50px;
+    width: 50px;
+    cursor: pointer;
+
+    @include tablet {
+      height: 36px;
+      width: 36px;
+    }
+
+    @include tablet {
+      order: 2;
+    }
+
+    & .ec-cart-widget {
+      width: 100%;
+      height: 100%;
+
+      & .ec-minicart {
+        height: 100%;
+        width: 100%;
+        padding: 0 !important;
+        color: $black !important;
+        transform: scale(1) !important;
+      }
+
+      & .ec-minicart__icon {
+        height: 50px !important;
+        width: 50px !important;
+
+        @include tablet {
+          height: 36px !important;
+          width: 36px !important;
+        }
+
+        & svg path {
+          stroke: $black !important;
+        }
+      }
+
+      &:hover .ec-minicart__icon {
+        & svg path {
+          stroke: $yellow !important;
+        }
+      }
+    }
+  }
+
+  &__hamburger {
+    display: none;
+    order: 0;
+    width: 35px;
+    height: 20px;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background: url(../assets/menu.svg) center no-repeat;
+    background-size: 34px;
+
+    @include tablet {
+      display: block;
+    }
+  }
+}
