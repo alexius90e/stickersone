@@ -1,0 +1,88 @@
+.categories {
+  & .container {
+    display: grid;
+    padding: 48px 80px;
+    grid-template-areas:
+      'stickerpack stickerpack stickerpack stickers stickers posters posters'
+      'stickerpack stickerpack stickerpack postcards postcards kpopcards kpopcards'
+      'random random random kpopposters kpopposters polaroids polaroids';
+    grid-template-columns: repeat(7, 1fr);
+    grid-template-rows: repeat(3, 268px);
+    gap: 16px;
+    background-color: #f7f7f6;
+
+    @include desktop {
+      padding: 48px 20px;
+      grid-template-rows: repeat(3, 200px);
+    }
+
+    @include laptop {
+      grid-template-rows: repeat(3, 150px);
+      gap: 8px;
+    }
+
+    @include tablet {
+      grid-template-areas:
+        'stickerpack stickerpack'
+        'stickerpack stickerpack'
+        'stickers postcards'
+        'random random'
+        'posters polaroids'
+        'kpopcards kpopposters';
+      grid-template-columns: repeat(2, 1fr);
+      grid-template-rows: repeat(6, 110px);
+    }
+
+    & > div {
+      border-radius: 30px;
+      overflow: hidden;
+      background-repeat: no-repeat;
+      background-position: top right;
+      background-size: cover;
+
+      @include laptop {
+        border-radius: 15px;
+      }
+    }
+  }
+
+  &__stickerpack {
+    grid-area: stickerpack;
+    background-image: url(../assets/categories/stickerpack-min.jpg);
+  }
+
+  &__stickers {
+    grid-area: stickers;
+    background-image: url(../assets/categories/stickers-min.jpg);
+  }
+
+  &__posters {
+    grid-area: posters;
+    background-image: url(../assets/categories/posters-min.jpg);
+  }
+
+  &__postcards {
+    grid-area: postcards;
+    background-image: url(../assets/categories/postcards-min.jpg);
+  }
+
+  &__kpop-cards {
+    grid-area: kpopcards;
+    background-image: url(../assets/categories/kpopcards-min.jpg);
+  }
+
+  &__kpop-posters {
+    grid-area: kpopposters;
+    background-image: url(../assets/categories/kpopposters-min.jpg);
+  }
+
+  &__polaroids {
+    grid-area: polaroids;
+    background-image: url(../assets/categories/polaroids-min.jpg);
+  }
+
+  &__random {
+    grid-area: random;
+    background-color: #8b5858;
+  }
+}
