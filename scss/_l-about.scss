@@ -1,0 +1,122 @@
+.about {
+  & .container {
+    padding: 85px 80px 80px;
+
+    @include desktop {
+      padding: 85px 20px 80px;
+    }
+
+    @include tablet {
+      padding: 36px 0 28px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 87px;
+    color: #403d38;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include tablet {
+      margin: 0 0 32px;
+      padding: 0 20px;
+      font-size: 22px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 42px;
+
+    @include laptop {
+      gap: 24px;
+    }
+
+    @include tablet {
+      flex-direction: column;
+      gap: 0;
+      margin-bottom: 26px;
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    &_center {
+      align-items: center;
+
+      @include tablet {
+        align-items: flex-start;
+      }
+    }
+  }
+
+  &__image {
+    flex: 1 1 550px;
+
+    @include tablet {
+      flex: 1 1 auto;
+      order: 0;
+      width: 100%;
+    }
+
+    & img {
+      display: block;
+      width: 550px;
+      height: auto;
+      object-fit: cover;
+
+      @include laptop {
+        width: 440px;
+      }
+
+      @include tablet {
+        max-width: 100%;
+        height: 240px;
+        width: auto;
+        margin: 0 auto;
+      }
+    }
+  }
+
+  &__text {
+    flex: 0 1 100%;
+    color: #222;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include laptop {
+      font-size: 20px;
+    }
+
+    @include tablet {
+      flex: 0 1 auto;
+      order: 1;
+      padding: 26px 32px 0;
+      font-size: 16px;
+    }
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+    & p {
+      margin: 0 0 32px;
+
+      @include tablet {
+        margin: 0 0 12px;
+      }
+
+      &:last-child {
+        @include tablet {
+          margin: 0;
+        }
+      }
+    }
+  }
+}
