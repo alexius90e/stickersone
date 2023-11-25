@@ -1,3 +1,150 @@
 .footer {
+  & .container {
+    position: relative;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 9px 20px;
+    padding: 32px 80px;
+    background-color: $yellow;
 
+    @include laptop {
+      padding: 32px 15px;
+    }
+
+    @include mobile {
+      flex-wrap: nowrap;
+      padding: 21px 15px 76px;
+    }
+  }
+
+  &__logo {
+    @include tablet {
+      display: none;
+    }
+
+    &-link {
+      display: inline-block;
+      width: 265px;
+    }
+
+    &-image {
+      height: auto;
+      width: 100%;
+    }
+  }
+
+  &__menu {
+    flex: 1 1 auto;
+    display: flex;
+    justify-content: center;
+    gap: 115px;
+    margin-right: 90px;
+
+    @include desktop {
+      margin-right: 0;
+    }
+
+    @include laptop {
+      gap: 40px;
+    }
+
+    @include tablet {
+      justify-content: flex-start;
+      gap: 68px;
+    }
+
+    @include mobile {
+      gap: 48px;
+    }
+
+    &-list {
+      margin: 0;
+      padding: 0;
+      list-style-type: none;
+
+      &-item {
+        margin-bottom: 10px;
+
+        &:last-child {
+          margin-bottom: 0;
+        }
+      }
+    }
+
+    &-link {
+      color: #403d38;
+      font-size: 16px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @include tablet {
+        font-size: 14px;
+      }
+    }
+  }
+
+  &__contacts {
+    flex: 0 0 auto;
+
+    &-social {
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      gap: 12px;
+    }
+
+    &-link {
+      color: #403d38;
+      font-size: 14px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      &_vk,
+      &_tg {
+        display: inline-block;
+        height: 30px;
+        width: 30px;
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: contain;
+      }
+
+      &_vk {
+        background-image: url(../assets/vk.svg);
+      }
+
+      &_tg {
+        background-image: url(../assets/tg.svg);
+      }
+
+      &_email {
+        @include mobile {
+          display: none;
+        }
+      }
+    }
+  }
+
+  &__copyrights {
+    flex: 1 1 100%;
+    color: #403d38;
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include tablet {
+      font-size: 14px;
+      text-align: right;
+    }
+
+    @include mobile {
+      position: absolute;
+      bottom: 32px;
+      left: 20px;
+      right: 20px;
+    }
+  }
 }
