@@ -1,3 +1,94 @@
 .facts {
-  
+  & .container {
+    padding: 53px 20px 50px;
+  }
+
+  &__title {
+    margin: 0 0 100px;
+    color: #403d38;
+    text-align: center;
+    font-size: 32px;
+    font-style: normal;
+    font-weight: 500;
+    line-height: normal;
+
+    @include tablet {
+      margin: 0 0 32px;
+      font-size: 22px;
+    }
+
+    & b {
+      font-weight: 600;
+    }
+  }
+
+  &__list {
+    display: flex;
+    gap: 33px;
+    max-width: 1276px;
+    margin: 0 auto 75px;
+    padding: 0;
+    list-style-type: none;
+
+    @include tablet {
+      margin: 0 auto 32px;
+      gap: 16px;
+    }
+
+    &-item {
+      flex: 0 1 33%;
+      display: flex;
+      align-items: center;
+      gap: 20px;
+      color: #222;
+      font-size: 20px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @include laptop {
+        flex-direction: column;
+        text-align: center;
+      }
+
+      @include tablet {
+        font-size: 16px;
+      }
+
+      @include mobile {
+        font-size: 11px;
+      }
+
+      & b {
+        font-weight: 600;
+      }
+
+      & img {
+        flex: 0 0 auto;
+        width: 100px;
+        height: 100px;
+        object-fit: cover;
+
+        @include tablet {
+          width: 44px;
+          height: 44px;
+        }
+      }
+    }
+  }
+
+  &__description {
+    max-width: 702px;
+    margin: 0 auto;
+    color: #222;
+    text-align: center;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include tablet {
+      font-size: 12px;
+    }
+  }
 }

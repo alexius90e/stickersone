@@ -898,6 +898,113 @@ ul {
   background-color: #8b5858;
 }
 
+.facts .container {
+  padding: 53px 20px 50px;
+}
+.facts__title {
+  margin: 0 0 100px;
+  color: #403d38;
+  text-align: center;
+  font-size: 32px;
+  font-style: normal;
+  font-weight: 500;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .facts__title {
+    margin: 0 0 32px;
+    font-size: 22px;
+  }
+}
+.facts__title b {
+  font-weight: 600;
+}
+.facts__list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 33px;
+  max-width: 1276px;
+  margin: 0 auto 75px;
+  padding: 0;
+  list-style-type: none;
+}
+@media (max-width: 768px) {
+  .facts__list {
+    margin: 0 auto 32px;
+    gap: 16px;
+  }
+}
+.facts__list-item {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 33%;
+          flex: 0 1 33%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  color: #222;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 992px) {
+  .facts__list-item {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    text-align: center;
+  }
+}
+@media (max-width: 768px) {
+  .facts__list-item {
+    font-size: 16px;
+  }
+}
+@media (max-width: 576px) {
+  .facts__list-item {
+    font-size: 11px;
+  }
+}
+.facts__list-item b {
+  font-weight: 600;
+}
+.facts__list-item img {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 0 auto;
+          flex: 0 0 auto;
+  width: 100px;
+  height: 100px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+@media (max-width: 768px) {
+  .facts__list-item img {
+    width: 44px;
+    height: 44px;
+  }
+}
+.facts__description {
+  max-width: 702px;
+  margin: 0 auto;
+  color: #222;
+  text-align: center;
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: normal;
+}
+@media (max-width: 768px) {
+  .facts__description {
+    font-size: 12px;
+  }
+}
+
 .month-product .container {
   padding: 60px 20px 95px;
   background-color: #F5B300;
