@@ -17,3 +17,19 @@ headerCloseButton.addEventListener('click', () => {
 //   if (!isCurrentTarget) headerNav.remove('active');
 //   console.log(isCurrentTarget);
 // });
+
+const mainSwiper = new Swiper('.main-slider .swiper', {
+  loop: true,
+  autoplay: {
+    delay: 10000,
+  },
+
+  pagination: {
+    el: '.main-slider .swiper-pagination',
+  },
+
+  navigation: {
+    nextEl: '.main-slider .swiper-button-next',
+    prevEl: '.main-slider .swiper-button-prev',
+  },
+});

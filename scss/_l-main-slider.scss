@@ -1,0 +1,133 @@
+.main-slider {
+  & .swiper {
+    &-slide {
+      height: 550px;
+      background-color: #0f1f2e;
+    }
+
+    &-button-prev,
+    &-button-next {
+      height: 64px;
+      width: 64px;
+      background: url(../assets/arrow.svg) no-repeat center;
+      background-size: cover;
+
+      @include laptop {
+        height: 48px;
+        width: 48px;
+      }
+
+      @include tablet {
+        display: none;
+      }
+
+      &::after {
+        display: none;
+      }
+    }
+
+    &-button-prev {
+      left: 50px;
+      transform: rotate(180deg);
+
+      @include laptop {
+        left: 24px;
+      }
+    }
+
+    &-button-next {
+      right: 50px;
+
+      @include laptop {
+        right: 24px;
+      }
+    }
+
+    &-pagination {
+      bottom: 50px !important;
+
+      @include tablet {
+        bottom: 32px !important;
+      }
+
+      &-bullet {
+        height: 15px;
+        width: 15px;
+        box-sizing: border-box;
+        border: 1px solid $white;
+        opacity: 1;
+
+        @include tablet {
+          height: 11px;
+          width: 11px;
+        }
+
+        &-active {
+          background-color: $white;
+        }
+      }
+    }
+  }
+
+  &__slide {
+    position: relative;
+
+    &-image {
+      margin: 0;
+      padding: 0;
+      height: 100%;
+      width: 100%;
+
+      & img {
+        height: 100%;
+        width: 100%;
+        object-fit: cover;
+      }
+    }
+
+    &-text {
+      position: absolute;
+      top: 96px;
+      right: 160px;
+      max-width: 425px;
+
+      @include tablet {
+        top: 54px;
+        left: 50%;
+        width: 70%;
+        transform: translateX(-50%);
+      }
+
+      @include mobile {
+        width: 80%;
+      }
+    }
+
+    &-title {
+      margin: 0 0 40px;
+      color: $white;
+      font-size: 40px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      @include tablet {
+        margin: 0 0 8px;
+        font-size: 32px;
+      }
+    }
+
+    &-description {
+      margin: 0;
+      color: $white;
+      font-size: 32px;
+      font-style: normal;
+      font-weight: 500;
+      line-height: normal;
+
+      @include tablet {
+        font-size: 20px;
+      }
+    }
+  }
+}
