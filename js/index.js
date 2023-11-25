@@ -12,12 +12,6 @@ headerCloseButton.addEventListener('click', () => {
   headerNav.classList.remove('active');
 });
 
-// headerNav.addEventListener('click', (event) => {
-//   const isCurrentTarget = event.target.classList.contains('.header__nav');
-//   if (!isCurrentTarget) headerNav.remove('active');
-//   console.log(isCurrentTarget);
-// });
-
 const mainSwiper = new Swiper('.main-slider .swiper', {
   loop: true,
   autoplay: {
