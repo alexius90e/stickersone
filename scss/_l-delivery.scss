@@ -1,0 +1,83 @@
+.delivery {
+  & .container {
+    padding: 105px 32px;
+    background-color: $white;
+
+    @include laptop {
+      padding: 36px 32px;
+    }
+  }
+
+  &__block {
+    display: flex;
+    gap: 40px;
+    max-width: 1143px;
+    margin: 0 auto 177px;
+
+    @include laptop {
+      display: block;
+      margin: 0 auto 32px;
+    }
+
+    &:last-child {
+      margin-bottom: 0;
+    }
+  }
+
+  &__title {
+    flex: 1 1 auto;
+    margin: 0;
+    padding-left: 40px;
+    color: #403d38;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include desktop {
+      padding: 0;
+    }
+
+    @include laptop {
+      margin-bottom: 28px;
+      text-align: center;
+    }
+
+    @include mobile {
+      font-size: 22px;
+    }
+  }
+
+  &__text {
+    flex: 0 1 702px;
+    color: #222;
+    font-size: 24px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+
+    @include mobile {
+      font-size: 12px;
+    }
+
+    & p {
+      margin: 0 0 24px;
+
+      @include mobile {
+        margin: 0 0 16px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+    }
+
+    & em {
+      font-weight: 500;
+    }
+
+    & b {
+      font-weight: 600;
+    }
+  }
+}

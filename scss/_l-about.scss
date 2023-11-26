@@ -1,6 +1,7 @@
 .about {
   & .container {
     padding: 85px 80px 80px;
+    background-color: $white;
 
     @include desktop {
       padding: 85px 20px 80px;
