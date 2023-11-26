@@ -3,6 +3,10 @@
     &-slide {
       height: 550px;
       background-color: #0f1f2e;
+
+      @include mobile {
+        height: 1000px;
+      }
     }
 
     &-button-prev,
@@ -56,6 +60,7 @@
         box-sizing: border-box;
         border: 1px solid $white;
         opacity: 1;
+        background-color: rgba($color: #000000, $alpha: 0);
 
         @include tablet {
           height: 11px;
@@ -78,10 +83,28 @@
       height: 100%;
       width: 100%;
 
-      & img {
+      &-web,
+      &-mobile {
+        display: inline-block;
         height: 100%;
         width: 100%;
         object-fit: cover;
+      }
+
+      &-web {
+        display: inline;
+
+        @include mobile {
+          display: none;
+        }
+      }
+
+      &-mobile {
+        display: none;
+
+        @include mobile {
+          display: inline;
+        }
       }
     }
 

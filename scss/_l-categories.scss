@@ -85,4 +85,10 @@
     grid-area: random;
     background-color: #8b5858;
   }
+
+  &__link {
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+  }
 }
