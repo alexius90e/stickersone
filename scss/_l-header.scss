@@ -46,10 +46,6 @@
   &__logo {
     flex: 0 0 auto;
 
-    @include tablet {
-      order: 1;
-    }
-
     &-link {
       display: inline-block;
       width: 55px;
@@ -229,10 +225,6 @@
       width: 36px;
     }
 
-    @include tablet {
-      order: 2;
-    }
-
     & .ec-cart-widget {
       width: 100%;
       height: 100%;
@@ -271,7 +263,6 @@
 
   &__hamburger {
     display: none;
-    order: 0;
     width: 35px;
     height: 20px;
     padding: 0;
