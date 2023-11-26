@@ -1,0 +1,219 @@
+.contacts {
+  & .container {
+    padding: 85px 82px;
+    background-color: $white;
+
+    @include desktop {
+      padding: 85px 33px;
+    }
+
+    @include tablet {
+      padding: 36px 33px 28px;
+    }
+  }
+
+  &__title {
+    margin: 0 0 92px;
+    color: #403d38;
+    text-align: center;
+    font-size: 36px;
+    font-style: normal;
+    font-weight: 700;
+    line-height: normal;
+
+    @include tablet {
+      margin: 0 0 24px;
+      font-size: 22px;
+      font-weight: 600;
+    }
+
+    &-secondary {
+      margin: 0 0 30px;
+      color: #403d38;
+      font-size: 28px;
+      font-style: normal;
+      font-weight: 700;
+      line-height: normal;
+
+      @include tablet {
+        text-align: center;
+        font-size: 22px;
+        font-weight: 600;
+      }
+    }
+  }
+
+  &__social {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 16px;
+    margin: 0 0 100px;
+
+    @include tablet {
+      gap: 12px 8px;
+      margin: 0 0 60px;
+    }
+
+    &-link {
+      margin: 0 auto;
+      padding-left: 36px;
+      color: #222;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+      background-position: left center;
+      background-repeat: no-repeat;
+      background-size: 27px;
+
+      @include laptop {
+        margin: 0;
+        padding-left: 30px;
+        font-size: 20px;
+        background-size: 24px;
+      }
+
+      @include tablet {
+        padding-left: 26px;
+        font-size: 16px;
+        background-size: 19px;
+      }
+
+      @include mobile {
+        padding-left: 22px;
+        font-size: 12px;
+        line-height: 16px;
+        background-size: 16px;
+      }
+
+      &_email {
+        background-image: url(../assets/email-yellow.svg);
+      }
+
+      &_vk {
+        background-image: url(../assets/vk-yellow.svg);
+      }
+
+      &_tg {
+        background-image: url(../assets/tg-yellow.svg);
+      }
+
+      & b {
+        font-weight: 700;
+      }
+    }
+  }
+
+  &__location {
+    display: flex;
+    align-items: center;
+    gap: 64px;
+    margin: 0 0 100px;
+
+    @include desktop {
+      gap: 24px;
+    }
+
+    @include tablet {
+      display: block;
+      margin: 0 0 44px;
+    }
+
+    &-details {
+      flex: 0 1 440px;
+
+      @include laptop {
+        flex: 0 1 380px;
+      }
+
+      @include tablet {
+        margin: 0 0 28px;
+      }
+    }
+
+    &-map {
+      flex: 1 1 auto;
+      height: 365px;
+      margin-right: -82px;
+      background-image: url(../assets/map.jpg);
+      background-position: center right;
+      background-repeat: no-repeat;
+      background-size: cover;
+      background-color: grey;
+
+      @include desktop {
+        margin-right: -33px;
+        background-position: center right -150px;
+      }
+
+      @include tablet {
+        margin: 0 -33px;
+        background-position: center right;
+      }
+
+      @include mobile {
+        background-position: center right -200px;
+      }
+    }
+
+    &-card {
+      margin-bottom: 40px;
+      padding-left: 24px;
+      background: url(../assets/location-yellow.svg) top 4px left no-repeat;
+
+      @include tablet {
+        margin-bottom: 16px;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &-name {
+        margin: 0 0 12px;
+        color: #222;
+        font-size: 24px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: normal;
+
+        @include tablet {
+          font-size: 16px;
+        }
+
+        & b {
+          font-weight: 500;
+        }
+      }
+
+      &-text {
+        margin: 0;
+        color: #222;
+        font-size: 16px;
+        font-style: normal;
+        font-weight: 400;
+        line-height: 150%;
+
+        @include tablet {
+          font-size: 10px;
+        }
+      }
+    }
+  }
+
+  &__details {
+    &-text {
+      color: #222;
+      font-size: 24px;
+      font-style: normal;
+      font-weight: 400;
+      line-height: normal;
+
+      @include tablet {
+        font-size: 16px;
+      }
+    }
+  }
+}
