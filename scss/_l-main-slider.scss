@@ -5,7 +5,8 @@
       background-color: #0f1f2e;
 
       @include mobile {
-        height: 1000px;
+        max-height: 860px;
+        height: calc(100vh - 74px);
       }
     }
 
